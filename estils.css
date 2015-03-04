@@ -1,0 +1,38 @@
+/*GENERAL*/						/* Atributs i marges de la pagina web, distribuint les zones en pixels, alçada(web=960 que es igual que 450+480+20) i amplada */
+html,
+body{margin:0;padding:0;font-family:Century Gothic, Arial, Helvetica, sans-serif;font-size:16px;}	
+#web{width:960px;margin:0 auto;}							
+#cap{height:450px;}
+#cos{min-height:480px;background:#d7dabf url(imatges/cos.gif) repeat top}
+#peu{margin:0;padding:15px;height:20px;background:#3a3d37 url(imatges/peu.gif) repeat-x top;text-align:center;font-weight:bold; color:#ffffff;font-size:13px}
+a img{border:none;}
+
+/*CAP*/
+#cap #logo{height:113px;background:url(imatges/logo.gif) repeat-x top; color:#ffffff;position:relative;}		/*Atributs i marges de les zones determinades de la pagina web */
+#cap #logo img{margin-left:46px;}
+#cap #logo p{position: absolute;right: 60px;top: 20px;}
+#cap #menu{height:49px;background:url(imatges/menu.gif) repeat-x top}
+#cap #menu #llistat{margin:0;padding:0;font-size:18px;color:white;list-style:none;padding-top:13px;padding-left:75px;}
+#cap #menu #llistat .punt{float:left;margin-left:20px;margin-right:20px;}
+#cap #menu #llistat .punt a{color:#ffffff;text-decoration:none;padding-top:14px;padding-bottom:14px;}
+#cap #sublogo{position:relative;height:288px;background:#4e534a url(imatges/hombramenu.gif) repeat-x top}
+#cap #sublogo .index {position: absolute;right: 0px;bottom: 0px;}
+#cap #sublogo .contactar {position: absolute;right: 0px;bottom: 0px;}
+#cap #sublogo .localitzacio {position: absolute;right: 0px;bottom: 0px;}
+#cap #sublogo .quisom {position: absolute;right: 0px;bottom: 0px;}
+#cap #sublogo .serveis {position: absolute;right: 15px;bottom: 0px;}
+#cap #sublogo .consells {position: absolute;right: 0px;bottom: 0px;}
+#cap #sublogo div {padding: 20px; width:400px; font-size:38px; color:#ffffff;}
+/*COS*/
+#cos p{color:#113275;}  
+#cos ul{}
+#cos a{}
+#cos h2{font-size:23px;color:#393d36;}
+#cos h3{font-size:16px;color:#393d36;}
+#cos h4{font-size:14px;color:#aabb7c;}
+#cos h5{font-size:12px;color:#393d36;}
+#cos #esq{width:560px;float:left;padding:30px 20px;}
+#cos #dre{width:300px;float:right;padding:30px 24px 0px 0px;}
+#cos #dre p{color:#9ea18f;}
+#cos #esq .mapa {position: relative;right: 0px;bottom: 0px;}
+/*PEU*/

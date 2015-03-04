@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Aeroport d'Alguaire</title>
+<link href="estils.css" rel="stylesheet" type="text/css" />
+<!-- Codi javascript encarregat d'imprimir el xml formatat gracies al xsl dintre del codi html de la web -->
+<script>
+function loadXMLDoc(dname) //funcio que possibilita la carrega dels fitxer xml xsl
+{
+if (window.XMLHttpRequest)
+  {
+  xhttp=new XMLHttpRequest();
+  }
+else
+  {
+  xhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xhttp.open("GET",dname,false);
+xhttp.send("");
+return xhttp.responseXML;
+}
+
+function mostrarResultat()
+{
+xml=loadXMLDoc("vols.xml"); //assignem a la variable el nom del fitxer xml
+xsl=loadXMLDoc("vols.xsl"); //assignem a la variable el nom del fitxer xsl
+// codi pels Internet Explorers, en IE9 no funciona
+if (window.ActiveXObject)
+  {
+  ex=xml.transformNode(xsl); //apliquem el xsl sobre l'xml i ho assignem a la variable ex
+  document.getElementById("contingut").innerHTML=ex; //cerquem l'html fins a trobar l'element "contingut" i l'omplim amb el contingut de la variable ex 
+  }
+// codi pel Mozilla Firefox
+else if (document.implementation && document.implementation.createDocument)
+  {
+  xsltProcessor=new XSLTProcessor();
+  xsltProcessor.importStylesheet(xsl);
+  resultDocument = xsltProcessor.transformToFragment(xml,document);
+  document.getElementById("contingut").appendChild(resultDocument); //cerquem l'html fins a trobar l'element "contingut" i l'omplim amb el contingut de l'xml
+  }
+}
+</script>
+</head>
+
+<body onLoad="mostrarResultat()"> <!-- Executem la funcio javascript -->
+<div id="web">
+  <div id="cap">
+    <div id="logo"><a href="index.html" title="Inici"><img src="imatges/logo.jpg" alt="Aeroport d'Alguaire"/></a>
+      <p>Generalitat de Catalunya</p>
+    </div>
+    <div id="menu">
+      <ul id="llistat">
+        <li class="punt"><a href="index.html" title="Inici">Inici</a></li>
+        <li class="punt"><a href="laeroport.html" title="L'Aeroport">L'Aeroport</a></li>
+        <li class="punt"><a href="vols.html" title="Vols">Vols</a></li>
+        <li class="punt"><a href="noticies.html" title="Notícies">Notícies</a></li>
+        <li class="punt"><a href="localitzacio.html" title="Localització">Localització</a></li>
+        <li class="punt"><a href="contactar.html" title="Contactar">Contactar</a></li>
+      </ul>
+    </div>
+    <div id="sublogo"><div></div><img class="index" src="imatges/747.jpg" alt="747"/></div>
+    
+  </div>
+  <div id="cos">
+    <div id="esq"><h2>BENVINGUTS</h2>
+    <p>Un aeroport jove amb grans aspiracions, una pista i molts serveis. </p>
+<div id="contingut"></div>
+</div>
+    <div id="dre"></div>
+    <br clear="all" />
+  </div>
+  <div id="peu">Aeroport d'Alguaire  Públic de Catalunya </div>
+</div>
+</body>
+</html>

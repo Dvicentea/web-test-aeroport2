@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aeroport>
+	<vol>
+		<hsortida>10:00</hsortida>
+		<harribada>12:00</harribada>		<!-- Aquesta gerarquia es com si tarctessim amb carpetes, cada una representa un contingut de la taula que cridem amb l'scrip de java -->
+		<origen>Luton</origen>
+		<desti>Alguaire</desti>				<!-- Dins l'aeroport tenim els vols, dins els vols hora de sortida, hora d'arribada, origen, desti i companya -->
+		<nvol>Y34656</nvol>
+		<companyia>Flanker Air</companyia>
+	</vol>
+	<vol>
+		<hsortida>12:00</hsortida>
+		<harribada>15:00</harribada>
+		<origen>Alguaire</origen>
+		<desti>Duxford</desti>
+		<nvol>Z33245</nvol>
+		<companyia>Volades</companyia>
+	</vol>
+	<vol>
+		<hsortida>10:00</hsortida>
+		<harribada>9:00</harribada>
+		<origen>USA</origen>
+		<desti>Alguaire</desti>
+		<nvol>P4569847</nvol>
+		<companyia>1982 Vols</companyia>
+	</vol>
+	<vol>
+		<hsortida>11:00</hsortida>
+		<harribada>12:30</harribada>
+		<origen>La Seu</origen>
+		<desti>Alguaire</desti>
+		<nvol>A564986</nvol>
+		<companyia>Virgin</companyia>
+	</vol>
+	<vol>
+		<hsortida>13:00</hsortida>
+		<harribada>Desviat</harribada>
+		<origen>Stanford Bridge</origen>
+		<desti>Alguaire</desti>
+		<nvol>T456165</nvol>
+		<companyia>Vols Pepito</companyia>
+	</vol>
+	<vol>
+		<hsortida>14:00</hsortida>
+		<harribada>Desviat</harribada>
+		<origen>Alguaire</origen>
+		<desti>Polydor</desti>
+		<nvol>L48964</nvol>
+		<companyia>Volades</companyia>
+	</vol>
+	<vol>
+		<hsortida>Cancelat</hsortida>
+		<harribada>Cancelat</harribada>
+		<origen>UK</origen>
+		<desti>Alguaire</desti>
+		<nvol>R46584</nvol>
+		<companyia>Volades</companyia>
+	</vol>
+	<vol>
+		<hsortida>17:00</hsortida>
+		<harribada>18:10t</harribada>
+		<origen>Alguaire</origen>
+		<desti>Pickwick</desti>
+		<nvol>H456421</nvol>
+		<companyia>1982 Vols</companyia>
+	</vol>
+	<vol>
+		<hsortida>20:00</hsortida>
+		<harribada>22:05</harribada>
+		<origen>EU</origen>
+		<desti>Alguaire</desti>
+		<nvol>Q458646</nvol>
+		<companyia>1982 Vols</companyia>
+	</vol>
+	<vol>
+		<hsortida>21:00</hsortida>
+		<harribada>8:26</harribada>
+		<origen>USA</origen>
+		<desti>Alguaire</desti>
+		<nvol>8.70</nvol>
+		<companyia>1982 Vols</companyia>
+	</vol>
+	
+</aeroport>
